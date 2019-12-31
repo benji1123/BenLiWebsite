@@ -19,13 +19,13 @@ html, body{
 .sky{
   height: 80%;
   background: #022660; /* dusk blue = #022660 */
-  animation: darken var(--day-length) linear alternate infinite
+  /* animation: darken var(--day-length) linear alternate infinite */
 }
 
 .grass{
   height: 5%;
-  background: green;
-  animation: darken var(--day-length) linear alternate infinite
+  background: #022660;
+  /* animation: darken var(--day-length) linear alternate infinite */
 }
 
 .road{
@@ -35,7 +35,7 @@ html, body{
   border-top: 10px solid grey;
   border-bottom: 10px solid grey;
   width: 100%;
-  animation: darken var(--day-length) linear alternate infinite
+  /* animation: darken var(--day-length) linear alternate infinite */
 }
 
 .lines{
@@ -133,7 +133,6 @@ html, body{
 #portal{
 	left: 50%;
 	bottom: 40%;
-	animation: glow 2s linear 1;
 }
 @keyframes glow{
 	from{opacity:100%}

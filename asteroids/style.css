@@ -38,7 +38,6 @@ html, body {
 #portal{
 	left: 50%;
 	bottom: 40%;
-	animation: glow 2s linear 1;
 }
 @keyframes glow{
 	from{opacity:100%}
