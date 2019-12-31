@@ -1,0 +1,141 @@
+/* BIG THANKS TO CSS ANIMATION TUTORIALS BY "NET NINJA" */
+
+:root {
+  --day-length: 2.4s;
+}
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* BACKGROUND ELEMENTS */
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 80%;
+  background: #022660; /* dusk blue = #022660 */
+  animation: darken var(--day-length) linear alternate infinite
+}
+
+.grass{
+  height: 5%;
+  background: green;
+  animation: darken var(--day-length) linear alternate infinite
+}
+
+.road{
+  height: 15%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+  animation: darken var(--day-length) linear alternate infinite
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+.cloud{
+	position: absolute;
+	filter: brightness(90%); /* dusk blue = 022660 */
+}
+
+@keyframes sunset{
+	from{background: skyblue}
+	to{background: #022660}
+}
+@keyframes darken{
+	from{filter: brightness(100%);}
+	to{filter: brightness(10%);}
+}
+
+/* KARTS */
+.mario{
+	/* def state */
+	z-index: 1;
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	/* keyframe animation */
+	animation: drive 4s both infinite linear, 
+			   jump 0.3 1.4s ease;
+	animation-delay: 1s;
+}
+.luigi{
+	/* def state */
+	z-index: 1;
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	/* keyframe animation */
+	animation: drive 4s both infinite linear; /* name dur fill iters timing-func*/
+	animation-delay: 0.8s;
+}
+@keyframes drive{
+	from{transform:translateX(-200px)}
+	to{transform:translateX(6000px)}
+	back{transform:}
+}
+@keyframes jump{
+	0%{top: -40px}
+	50%{top: -100px}
+	100%{top: -40px}
+}
+
+/* CLOUDS */
+.cloud:nth-child(1){
+	width: 200px;
+	top: 120px;
+	opacity: 0.5;
+	animation: wind 70s linear reverse infinite;
+}
+.cloud:nth-child(2){
+	width: 300px;
+	top: 0px;
+	animation: wind 80s linear infinite;
+}
+@keyframes wind{
+	from{left: -300px}
+	to{left: 100%}
+}
+
+/* ICONS */
+.icon{
+	z-index: 1;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: 50%;
+	opacity: 60%;
+	animation: glow 0.5s linear infinite alternate-reverse;
+}
+#resume{
+	left: 40%;
+}
+#linkedin{
+	left: 50%;
+}
+#github{
+	left: 60%;
+}
+#portal{
+	left: 50%;
+	bottom: 40%;
+	animation: glow 2s linear 1;
+}
+@keyframes glow{
+	from{opacity:100%}
+	to{opacity:0%}
+}
