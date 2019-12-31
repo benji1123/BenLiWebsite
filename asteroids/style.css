@@ -36,8 +36,8 @@ html, body {
 	filter: invert(0);
 } */
 #portal{
-	left: 50%;
-	bottom: 40%;
+	left: 70%;
+	/* bottom: 40%; */
 }
 @keyframes glow{
 	from{opacity:100%}

@@ -131,8 +131,8 @@ html, body{
 	left: 60%;
 }
 #portal{
-	left: 50%;
-	bottom: 40%;
+	left: 70%;
+	/* bottom: 40%; */
 }
 @keyframes glow{
 	from{opacity:100%}
